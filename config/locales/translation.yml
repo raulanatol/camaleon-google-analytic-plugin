@@ -1,6 +1,6 @@
 en:
   plugin:
-    google_analytic:
+    camaleon_google_analytic:
       settings:
         link_name: 'Settings'
         title: 'Google analytics settings'
@@ -10,7 +10,7 @@ en:
         settings_saved: 'Settings saved!'
 es:
   plugin:
-    google_analytic:
+    camaleon_google_analytic:
       settings:
         link_name: 'Preferencias'
         title: 'Configuración de Google Analytics'
