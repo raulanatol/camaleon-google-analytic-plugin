@@ -7,7 +7,7 @@ require 'camaleon_google_analytic/version'
 Gem::Specification.new do |s|
   s.name = 'camaleon_google_analytic'
   s.version = CamaleonGoogleAnalytic::VERSION
-  s.authors = ['Raúl Anatol']
+  s.authors = ['raulanatol']
   s.email = ['raul@natol.es']
   s.homepage = 'http://camaleon.tuzitio.com/store/plugins/9'
   s.summary = 'Google analytics plugin'
