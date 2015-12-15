@@ -1,4 +1,4 @@
-class Plugins::CamaleonGoogleAnalytic::AdminController < Apps::PluginsAdminController
+class Plugins::CamaleonGoogleAnalytic::AdminController < CamaleonCms::Apps::PluginsAdminController
   include Plugins::CamaleonGoogleAnalytic::MainHelper
 
   def settings

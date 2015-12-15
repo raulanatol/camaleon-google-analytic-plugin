@@ -16,7 +16,6 @@ module Plugins::CamaleonGoogleAnalytic::MainHelper
   # here all actions on going to inactive
   # plugin: plugin model
   def camaleon_google_analytic_on_inactive(plugin)
-    current_site.camaleon_google_analytic.destroy_all
   end
 
   # here all actions to upgrade for a new version
@@ -25,10 +24,10 @@ module Plugins::CamaleonGoogleAnalytic::MainHelper
   end
 
   def google_analytic_front_before_load
-    cameleon_google_analytics_meta = current_site.get_meta('camaleon_google_analytic_config')
-    if cameleon_google_analytics_meta.has_key? :code
-      camaleon_google_analytics_code = cameleon_google_analytics_meta[:code]
-      append_asset_content("<script>window.GAID='#{camaleon_google_analytics_code}';</script>")
+    camaleon_google_analytics_meta = current_site.get_meta('camaleon_google_analytic_config')
+    if camaleon_google_analytics_meta.has_key? :code
+      camaleon_google_analytics_code = camaleon_google_analytics_meta[:code]
+      append_pre_asset_content("<script>window.GAID='#{camaleon_google_analytics_code}';</script>")
       append_asset_libraries({camaleon_google_analytic: {js: [plugin_gem_asset('google_analytics')]}})
     end
   end
