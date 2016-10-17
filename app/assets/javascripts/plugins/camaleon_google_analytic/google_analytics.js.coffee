@@ -21,6 +21,7 @@ class @GoogleAnalytics
 
     if typeof Turbolinks isnt 'undefined' and Turbolinks.supported
       document.addEventListener "page:change", GoogleAnalytics.trackPageview, true
+      document.addEventListener "turbolinks:load", GoogleAnalytics.trackPageview, true
     else
       GoogleAnalytics.trackPageview()
 
